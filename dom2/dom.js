@@ -38,16 +38,57 @@
 // titles[0].style.color = "orange";
 
 //TASK-6
-var odd = document.querySelectorAll("li:nth-child(odd)");
+// var odd = document.querySelectorAll("li:nth-child(odd)");
 
-for (var i = 0; i < odd.length; i++) {
-  odd[i].style.backgroundColor = "green";
-}
+// for (var i = 0; i < odd.length; i++) {
+//   odd[i].style.backgroundColor = "green";
+// }
 
-var secItem = document.querySelector(".list-group-item:nth-child(2)");
-secItem.style.backgroundColor = "lightgreen";
-var thirdItem = document.querySelector(".list-group-item:nth-child(3)");
-thirdItem.style.display = "none";
+// var secItem = document.querySelector(".list-group-item:nth-child(2)");
+// secItem.style.backgroundColor = "lightgreen";
+// var thirdItem = document.querySelector(".list-group-item:nth-child(3)");
+// thirdItem.style.display = "none";
 
-var second = document.querySelectorAll("li");
-second[1].style.color = "green";
+// var second = document.querySelectorAll("li");
+// second[1].style.color = "green";
+
+//TASK-7
+var itemList = document.querySelector("#items");
+
+console.log(itemList.parentNode);
+itemList.parentNode.style.backgroundColor = "pink";
+
+var itemList = document.querySelector("#items");
+
+console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundColor = "pink";
+
+console.log(itemList.childNodes);
+
+console.log(itemList.children);
+console.log(itemList.children[1]);
+itemList.children[1].style.backgroundColor = "yellow";
+
+console.log(itemList.firstElementChild);
+console.log(itemList.lastChild);
+console.log(itemList.lastElementChild);
+console.log(itemList.nextSibling);
+console.log(itemList.nextElementSibling);
+
+console.log(itemList.previousSibling);
+console.log(itemList.previousElementSibling);
+
+var newDiv = document.createElement("div");
+newDiv.className = "hello";
+newDiv.id = "hello1";
+newDiv.setAttribute("title", "Hello div");
+console.log(newDiv);
+
+var newDivText = document.createTextNode("Hello world");
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector("header .container");
+var h1 = document.querySelector("header h1");
+
+console.log(newDiv);
+container.insertBefore(newDiv, h1);
